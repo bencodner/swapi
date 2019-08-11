@@ -10,6 +10,4 @@ RUN apk add --no-cache python3 \
 
 COPY starwars.py /
 
-ENTRYPOINT ["python", "starwars.py", "$@"]
-
-
+ENTRYPOINT ["python", "starwars.py"]

@@ -40,10 +40,11 @@ if len(sys.argv) == 1:
     print(json.dumps({ "error": "no movie entered", "films": FILMS }))
     sys.exit()
 else:
-    film = " ".join(sys.argv[2:]).lower()
+    film = " ".join(sys.argv[1:]).lower()
 data = getFilmData(film)
 
 if len(data.keys()) > 0:
     print(json.dumps(data))
+    sys.exit(0)
 else:
     print(json.dumps({ "error": "failed to get film data", "films": FILMS }))
